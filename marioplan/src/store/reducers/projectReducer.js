@@ -3,7 +3,6 @@ const initState = {directProjects: []}
 const projectReducer = (state = initState, action) => {
   switch (action.type) {
     case 'GET_MEMBERS_FROM_FIREBASE':
-      console.log('in GET_MEMBERS_FROM_FIREBASE ', action.payload)
       return {...state, directProjects: action.payload};
     case 'CREATE_PROJECT_SUCCESS':
       console.log('create project success');

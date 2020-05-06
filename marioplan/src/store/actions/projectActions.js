@@ -7,7 +7,6 @@ export const listMembers = () => {
       querySnapshot.forEach((doc) => {
         members.push({...doc.data(), id: doc.id});
       });
-      console.log('listMembers action', members);
       dispatch({type: 'GET_MEMBERS_FROM_FIREBASE', payload: members});
     });
   }
