@@ -136,11 +136,8 @@ class UpdateProject extends Component {
 const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
   const projects = state.firestore.data.projects;
-  const project = projects ? projects[id] : null;
-  console.log('project', project);
   return {
     auth: state.firebase.auth,
-    project,
     directProject: state.project.directProjects.filter(i => 
       i.id === id
     )[0]

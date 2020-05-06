@@ -17,7 +17,6 @@ const ProjectDetails = (props) => {
   const { auth, directProject } = props;
   if (!auth.uid) return <Redirect to='/signin' /> 
   if (directProject) {
-    console.log('directProject after filter',directProject.flatno);
     return (
       <div className="container section project-details">
       <div className="row-flex-container">
@@ -61,7 +60,6 @@ const ProjectDetails = (props) => {
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('inside ProjectDetails-',state);
   const id = ownProps.match.params.id;
   //const projects = state.firestore.data.projects;
   //const project = projects ? projects[id] : null
