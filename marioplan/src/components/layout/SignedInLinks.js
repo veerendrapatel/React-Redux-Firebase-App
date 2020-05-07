@@ -4,20 +4,18 @@ import { connect } from 'react-redux'
 import { signOut } from '../../store/actions/authActions'
 
 const SignedInLinks = (props) => {
-  let initials = '';
-  if(props.profile.firstName && props.profile.lastName) {
-    initials = props.profile.firstName.charAt(0) + props.profile.lastName.charAt(0)
-  }
+  // let initials = '';
+  // if(props.profile.firstName && props.profile.lastName) {
+  //   initials = props.profile.firstName.charAt(0) + props.profile.lastName.charAt(0)
+  // }
   return (
-    <div>
-      <ul className="right">
-        <li><NavLink to='/create'>Add Member</NavLink></li>
-        <li><a onClick={props.signOut}>Log Out</a></li>
-        <li><NavLink to='/' className="btn btn-floating pink lighten-1">
+    <ul>
+      {<li><NavLink to='/create'><i class="small material-icons">add</i>Add Member</NavLink></li> }
+      <li><a onClick={props.signOut}><i class="small material-icons">exit_to_app</i>Log Out</a></li>
+      {/* <li><NavLink to='/' className="btn btn-floating pink lighten-1">
           {initials}
-        </NavLink></li>
-      </ul>
-    </div>
+      </NavLink></li> */}
+    </ul>
   )
 }
 
