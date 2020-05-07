@@ -7,22 +7,18 @@ import { Redirect } from 'react-router-dom'
 class UpdateProject extends Component {
   state = {
     id: this.props.directProject ? this.props.directProject.id : '',
-    flatno: this.props.directProject? this.props.directProject.flatno : ''
-    // member1name: this.props.project.member1name,
-    // member1bloodgrp: this.props.project.member1bloodgrp,
-    // member1phone: this.props.project.member1phone,
-    // member1officeaddress: this.props.project.member1officeaddress,
-    // member1email: this.props.project.member1email,
-    // member1twowheel: this.props.project.member1twowheel,
-    // member1carno: this.props.project.member1carno,
-    // member2name: this.props.project.member2name,
-    // member2bloodgrp: this.props.project.member2bloodgrp,
-    // member2phone: this.props.project.member2phone,
-    // member2officeaddress: this.props.project.member2officeaddress,
-    // member2email: this.props.project.member2email,
-    // member2twowheel: this.props.project.member2twowheel,
-    // member2carno: this.props.project.member2carno,
-    // otherdetail: this.props.project.otherdetail
+    flatno: this.props.directProject? this.props.directProject.flatno : '',
+    member1name: this.props.directProject? this.props.directProject.member1name : '',
+    totalfamilycount: this.props.directProject? this.props.directProject.totalfamilycount : 0,
+    member1bloodgroup: this.props.directProject? this.props.directProject.member1bloodgroup : '',
+    member1email: this.props.directProject? this.props.directProject.member1email : '',
+    member1phone: this.props.directProject? this.props.directProject.member1phone : '',
+    member1phone2: this.props.directProject? this.props.directProject.member1phone2 : '',
+    member1bike1: this.props.directProject? this.props.directProject.member1bike1 : '',
+    member1bike2: this.props.directProject? this.props.directProject.member1bike2 : '',
+    member1carno: this.props.directProject? this.props.directProject.member1carno : '',
+    member1officeaddress: this.props.directProject? this.props.directProject.member1officeaddress : '',
+    otherdetail: this.props.directProject? this.props.directProject.otherdetail : ''
   }
   
   handleChange = (e) => {
@@ -47,83 +43,63 @@ class UpdateProject extends Component {
             <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno}/>
             <label className="active" htmlFor="flatno">Flat No</label>
           </div>
-          {/* <div className="input-field col s6">
-            <input type="text" id="member1name" onChange={this.handleChange} defaultValue={project&&project.member1name ? project.member1name : ''}/>
-            <label className="active" htmlFor="member1name">Member 1 Name</label>
-          </div> */}
-          </div>
-          {/* <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member1bloodgrp' onChange={this.handleChange} defaultValue={project&& project.member1bloodgrp? project.member1bloodgrp : ''}/>
-            <label className="active" htmlFor="member1bloodgrp">Member 1 Blood Group</label>
-          </div>
-          <div className="input-field col s6">
-            <input type="text" id="member1phone" onChange={this.handleChange} defaultValue={project&&project.member1phone ? project.member1phone : ''}/>
-            <label className="active" htmlFor="member1phone">Member 1 Phone No</label>
+            <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name}/>
+            <label className="active" htmlFor="member1name">Name</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member1officeaddress' onChange={this.handleChange} defaultValue={project&&project.member1officeaddress ? project.member1officeaddress : ''}/>
-            <label className="active" htmlFor="member1officeaddress">Member 1 Office Address</label>
+            <input type="number" id='totalfamilycount' onChange={this.handleChange} value={this.state.totalfamilycount}/>
+            <label className="active" htmlFor="totalfamilycount">Fmaily members count</label>
           </div>
           <div className="input-field col s6">
-            <input type="text" id="member1email" onChange={this.handleChange} defaultValue={project&&project.member1email ? project.member1email : ''}/>
-            <label className="active" htmlFor="member1email">Member 1 Email Id</label>
+            <input type="email" id="member1email" onChange={this.handleChange} value={this.state.member1email}/>
+            <label className="active" htmlFor="member1email">Email</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member1twowheel' onChange={this.handleChange} defaultValue={project&&project.member1twowheel ? project.member1twowheel : ''}/>
-            <label className="active" htmlFor="member1twowheel">Member 1 Bike No</label>
+            <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone}/>
+            <label className="active" htmlFor="member1phone">Primary mobile no</label>
           </div>
           <div className="input-field col s6">
-            <input type="text" id="member1carno" onChange={this.handleChange} defaultValue={project&&project.member1carno ? project.member1carno : ''}/>
-            <label className="active" htmlFor="member1carno">Member 1 Car No</label>
+            <input type="number" id="member1phone2" onChange={this.handleChange} value={this.state.member1phone2}/>
+            <label className="active" htmlFor="member1phone2">Secondary mobile no</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id="member2name" onChange={this.handleChange} defaultValue={project&&project.member2name ? project.member2name : ''}/>
-            <label className="active" htmlFor="member2name">Member 2 Name</label>
+            <input type="text" id='member1bike1' onChange={this.handleChange} value={this.state.member1bike1}/>
+            <label className="active" htmlFor="member1bike1">Bike no</label>
+          </div>
+          <div className="input-field col s6">
+            <input type="text" id="member1bike2" onChange={this.handleChange} value={this.state.member1bike2}/>
+            <label className="active" htmlFor="member1bike2">Bike no2</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member2bloodgrp' onChange={this.handleChange} defaultValue={project&&project.member2bloodgrp ? project.member2bloodgrp : ''}/>
-            <label className="active" htmlFor="member2bloodgrp">Member 2 Blood Group</label>
-          </div>
-          <div className="input-field col s6">
-            <input type="text" id="member2phone" onChange={this.handleChange} defaultValue={project&&project.member2phone ? project.member2phone : ''}/>
-            <label className="active" htmlFor="member2phone">Member 2 Phone No</label>
+            <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
+            <label className="active" htmlFor="member1carno">Car no</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member2officeaddress' onChange={this.handleChange} defaultValue={project&&project.member2officeaddress ? project.member2officeaddress : ''}/>
-            <label className="active" htmlFor="member2officeaddress">Member 2 Office Address</label>
+            <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup}/>
+            <label className="active" htmlFor="member1bloodgroup">Fmaily members blood groups(seperated by comma)</label>
           </div>
           <div className="input-field col s6">
-            <input type="text" id="member2email" onChange={this.handleChange} defaultValue={project&&project.member2email ? project.member2email : ''}/>
-            <label className="active" htmlFor="member2email">Member 2 Email Id</label>
-          </div>
-          </div>
-          <div className="row">
-          <div className="input-field col s6">
-            <input type="text" id='member2twowheel' onChange={this.handleChange} defaultValue={project&&project.member2twowheel ? project.member2twowheel : ''}/>
-            <label className="active" htmlFor="member2twowheel">Member 2 Bike No</label>
-          </div>
-          <div className="input-field col s6">
-            <input type="text" id="member2carno" onChange={this.handleChange} defaultValue={project&&project.member2carno ? project.member2carno : ''}/>
-            <label className="active" htmlFor="member2carno">Member 2 Car No</label>
+            <input type="text" id="member1officeaddress" onChange={this.handleChange} value={this.state.member1officeaddress}/>
+            <label className="active" htmlFor="member1officeaddress">Office address</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s12">
-            <textarea id="otherdetail" className="materialize-textarea" onChange={this.handleChange} defaultValue={project&&project.otherdetail ? project.otherdetail : ''}></textarea>
+            <textarea id="otherdetail" className="materialize-textarea" onChange={this.handleChange} value={this.state.otherdetail}></textarea>
             <label className="active" htmlFor="otherdetail">Other Detail</label>
           </div>
-          </div> */}
+          </div>
           <div className="input-field">
             <button className="btn pink lighten-1">Update</button>
           </div>
@@ -135,7 +111,7 @@ class UpdateProject extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
-  const projects = state.firestore.data.projects;
+  //const projects = state.firestore.data.projects;
   return {
     auth: state.firebase.auth,
     directProject: state.project.directProjects.filter(i => 
