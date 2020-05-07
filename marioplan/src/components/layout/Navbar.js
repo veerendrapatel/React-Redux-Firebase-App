@@ -30,7 +30,7 @@ const Navbar = (props) => {
           background: 'https://placeimg.com/640/480/tech',
           email: auth.email,
           image: 'https://placeimg.com/640/480/tech/static/media/react-materialize-logo.824c6ea3.svg',
-          name: profile.firstName
+          name: profile.firstName || 'Simandhar Darshan'
         }}
         userView
       />
