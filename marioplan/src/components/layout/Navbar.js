@@ -25,9 +25,9 @@ const Navbar = (props) => {
     >
       <SideNavItem
         user={{
-          //background: 'https://placeimg.com/640/480/tech',
+          background: 'https://firebasestorage.googleapis.com/v0/b/simandhar-7b623.appspot.com/o/jain2.jpeg?alt=media&token=316032f1-0715-4bf1-8ac3-ad5d487646b8',
           email: auth.email || '',
-          //image: 'https://placeimg.com/640/480/tech/static/media/react-materialize-logo.824c6ea3.svg',
+          image: 'https://firebasestorage.googleapis.com/v0/b/simandhar-7b623.appspot.com/o/marble-jain.jpg?alt=media&token=d407706e-16fb-42c0-bcd6-68879394acf0',
           name: profile.firstName || 'Simandhar Darshan'
         }}
         userView
