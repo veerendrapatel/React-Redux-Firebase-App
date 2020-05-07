@@ -2,12 +2,10 @@ import React from 'react'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import { connect } from 'react-redux'
-import {SideNav, SideNavItem, Button} from 'react-materialize';
-import { Link } from 'react-router-dom'
+import {SideNav, SideNavItem} from 'react-materialize';
 
 const Navbar = (props) => {
   const { auth, profile } = props;
-  console.log('auth', auth);
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
   return (
     <div>
