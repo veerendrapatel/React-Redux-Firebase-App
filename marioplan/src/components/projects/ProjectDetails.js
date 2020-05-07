@@ -29,7 +29,6 @@ const ProjectDetails = (props) => {
             <ul class="collection with-header">
             {directProject && directProject.member1name && <li class="collection-header indigo lighten-5"><h3>{directProject.member1name}</h3></li>}
             {directProject && directProject.totalfamilycount && <li class="collection-header yellow lighten-5">Family members - {directProject.totalfamilycount}</li>}
-            {directProject && directProject.member1email && <li class="collection-header light-blue lighten-5">Email - {directProject.member1email}</li>}
             {directProject && directProject.member1phone && <li class="collection-header red lighten-5">Primary no - {directProject.member1phone}</li>}
             {directProject && directProject.member1phone2 && <li class="collection-header red lighten-4">Secondary no - {directProject.member1phone2}</li>}
             {directProject && directProject.member1bloodgroup && <li class="collection-header red lighten-2">Blood group - {directProject.member1bloodgroup}</li>}

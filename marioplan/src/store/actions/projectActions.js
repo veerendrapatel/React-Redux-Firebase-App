@@ -1,7 +1,6 @@
 import firebase from '../../config/fbConfig.js';
 export const listMembers = () => {
   return (dispatch) => {
-    console.log('inside ListMembers');
     firebase.firestore().collection('projects').onSnapshot(function(querySnapshot) {
       const members = [];
       querySnapshot.forEach((doc) => {

@@ -10,8 +10,8 @@ const SignedInLinks = (props) => {
   // }
   return (
     <ul>
-      {<li><NavLink to='/create'><i class="small material-icons">add</i>Add Member</NavLink></li> }
-      <li><a onClick={props.signOut}><i class="small material-icons">exit_to_app</i>Log Out</a></li>
+      <li><NavLink to='/create'><i className="small material-icons">add</i>Add Member</NavLink></li> 
+      <li><a onClick={props.signOut}><i className="small material-icons">exit_to_app</i>Log Out</a></li>
       {/* <li><NavLink to='/' className="btn btn-floating pink lighten-1">
           {initials}
       </NavLink></li> */}

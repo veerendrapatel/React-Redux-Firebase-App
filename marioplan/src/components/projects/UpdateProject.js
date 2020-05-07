@@ -11,7 +11,6 @@ class UpdateProject extends Component {
     member1name: this.props.directProject? this.props.directProject.member1name : '',
     totalfamilycount: this.props.directProject? this.props.directProject.totalfamilycount : 0,
     member1bloodgroup: this.props.directProject? this.props.directProject.member1bloodgroup : '',
-    member1email: this.props.directProject? this.props.directProject.member1email : '',
     member1phone: this.props.directProject? this.props.directProject.member1phone : '',
     member1phone2: this.props.directProject? this.props.directProject.member1phone2 : '',
     member1bike1: this.props.directProject? this.props.directProject.member1bike1 : '',
@@ -50,16 +49,6 @@ class UpdateProject extends Component {
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="number" id='totalfamilycount' onChange={this.handleChange} value={this.state.totalfamilycount}/>
-            <label className="active" htmlFor="totalfamilycount">Fmaily members count</label>
-          </div>
-          <div className="input-field col s6">
-            <input type="email" id="member1email" onChange={this.handleChange} value={this.state.member1email}/>
-            <label className="active" htmlFor="member1email">Email</label>
-          </div>
-          </div>
-          <div className="row">
-          <div className="input-field col s6">
             <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone}/>
             <label className="active" htmlFor="member1phone">Primary mobile no</label>
           </div>
@@ -83,11 +72,15 @@ class UpdateProject extends Component {
             <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
             <label className="active" htmlFor="member1carno">Car no</label>
           </div>
+          <div className="input-field col s6">
+            <input type="number" id='totalfamilycount' onChange={this.handleChange} value={this.state.totalfamilycount}/>
+            <label className="active" htmlFor="totalfamilycount">Fmaily members count</label>
+          </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
             <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup}/>
-            <label className="active" htmlFor="member1bloodgroup">Fmaily members blood groups(seperated by comma)</label>
+            <label className="active" htmlFor="member1bloodgroup">Blood group</label>
           </div>
           <div className="input-field col s6">
             <input type="text" id="member1officeaddress" onChange={this.handleChange} value={this.state.member1officeaddress}/>
