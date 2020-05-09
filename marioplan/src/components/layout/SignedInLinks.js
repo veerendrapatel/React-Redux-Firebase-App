@@ -2,17 +2,19 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signOut } from '../../store/actions/authActions'
+import { Redirect } from 'react-router-dom'
 
 const SignedInLinks = (props) => {
   // let initials = '';
   // if(props.profile.firstName && props.profile.lastName) {
   //   initials = props.profile.firstName.charAt(0) + props.profile.lastName.charAt(0)
   // }
-  const { auth, members } = props;
+  const { auth, members, profile } = props;
   const handleClick = () => {
     window.location.reload(false);
   }
-
+  if (profile.approved === false) return <Redirect to='/approvalWaiting' />
+  
   const isUserAddedMember = members.some(el => el.authorId === auth.uid )
   return (
     <ul>
@@ -34,7 +36,8 @@ const mapStateToProps = (state) => {
   //const projects = state.firestore.data.projects;
   return {
     auth: state.firebase.auth,
-    members: state.project.directProjects
+    members: state.project.directProjects,
+    profile: state.firebase.profile
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(SignedInLinks)

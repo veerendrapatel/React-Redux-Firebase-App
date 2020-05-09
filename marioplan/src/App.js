@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import ProjectDetails from './components/projects/ProjectDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+import AwaitingA from './components/auth/Awaiting'
 import CreateProject from './components/projects/CreateProject'
 import UpdateProject from './components/projects/UpdateProject'
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/' component={Dashboard} />
+            <Route path='/approvalWaiting' component={AwaitingA}/>
             <Route path='/refresh' component={Dashboard} />
             <Route path='/project/:id' component={ProjectDetails} />
             <Route path='/signin' component={SignIn} />

@@ -18,8 +18,8 @@ class UpdateProject extends Component {
     member1carno: this.props.directProject? this.props.directProject.member1carno : '',
     member1officeaddress: this.props.directProject? this.props.directProject.member1officeaddress : '',
     otherdetail: this.props.directProject? this.props.directProject.otherdetail : '',
-    member1dob: this.props.directProject && this.props.directProject.member1dob != undefined? this.props.directProject.member1dob : '',
-    flatstatus: this.props.directProject && this.props.directProject.flatstatus != undefined ? this.props.directProject.flatstatus : '',
+    member1dob: this.props.directProject && this.props.directProject.member1dob !== undefined? this.props.directProject.member1dob : '',
+    flatstatus: this.props.directProject && this.props.directProject.flatstatus !== undefined ? this.props.directProject.flatstatus : '',
   }
   
   handleChange = (e) => {
@@ -46,7 +46,7 @@ class UpdateProject extends Component {
           </div>
           <div className="input-field col s3">
             <input type="text" id="flatstatus" onChange={this.handleChange} value={this.state.flatstatus} required/>
-            <label className="active" htmlFor="flatstatus">Flat Self Occupied/Rented</label>
+            <label className="active" htmlFor="flatstatus">Flat Self/Rented</label>
           </div>
           <div className="input-field col s6">
             <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name} required/>

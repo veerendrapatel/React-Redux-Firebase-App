@@ -43,7 +43,7 @@ class CreateProject extends Component {
           </div>
           <div className="input-field col s3">
             <input type="text" id='flatstatus' onChange={this.handleChange} value={this.state.flatstatus} class="validate"/>
-            <label htmlFor="flatstatus">Flat Self Occupied/Rented</label>
+            <label htmlFor="flatstatus">Flat Self/Rented</label>
           </div>
           <div className="input-field col s6">
             <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name}/>
