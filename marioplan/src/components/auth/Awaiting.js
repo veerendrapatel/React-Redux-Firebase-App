@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 class Awaiting extends Component {
   render() {
+    const { profile } = this.props;
+
+    if (profile.approved === true) return <Redirect to='/' />
     return (
       <div className="container">
         <div className="progress">
@@ -27,5 +31,10 @@ class Awaiting extends Component {
     )
   }
 }
-
-export default Awaiting;
+const mapStateToProps = (state) => {
+  //const projects = state.firestore.data.projects;
+  return {
+    profile: state.firebase.profile
+  }
+}
+export default connect(mapStateToProps)(Awaiting)
