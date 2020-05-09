@@ -8,15 +8,18 @@ const SignedInLinks = (props) => {
   // if(props.profile.firstName && props.profile.lastName) {
   //   initials = props.profile.firstName.charAt(0) + props.profile.lastName.charAt(0)
   // }
+  const { auth, members } = props;
   const handleClick = () => {
     window.location.reload(false);
   }
+
+  const isUserAddedMember = members.some(el => el.authorId === auth.uid )
   return (
     <ul>
       <li onClick={handleClick}><NavLink to='/'><i className="small material-icons">home</i>
           Home
       </NavLink></li>
-      <li onClick={handleClick}><NavLink to='/create'><i className="small material-icons">add</i>Add Member</NavLink></li> 
+      {!isUserAddedMember && <li onClick={handleClick}><NavLink to='/create'><i className="small material-icons">add</i>Add Member</NavLink></li>} 
       <li onClick={handleClick}><a onClick={props.signOut}><i className="small material-icons">exit_to_app</i>Log Out</a></li>
     </ul>
   )
@@ -27,5 +30,11 @@ const mapDispatchToProps = (dispatch) => {
     signOut: () => dispatch(signOut())
   }
 }
-
-export default connect(null, mapDispatchToProps)(SignedInLinks)
+const mapStateToProps = (state) => {
+  //const projects = state.firestore.data.projects;
+  return {
+    auth: state.firebase.auth,
+    members: state.project.directProjects
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SignedInLinks)

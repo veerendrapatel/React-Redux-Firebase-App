@@ -1,4 +1,5 @@
-import firebase from '../../config/fbConfig.js';
+//import firebase from '../../config/fbConfig.js';
+import firebase from '../../config/dummyFBConfig'
 export const listMembers = () => {
   return (dispatch) => {
     firebase.firestore().collection('projects').onSnapshot(function(querySnapshot) {

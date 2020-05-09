@@ -15,7 +15,9 @@ class CreateProject extends Component {
     member1bike2: '',
     member1carno: '',
     member1officeaddress: '',
-    otherdetail: ''
+    otherdetail: '',
+    member1dob: '',
+    flatstatus: ''
   }
   handleChange = (e) => {
     this.setState({
@@ -35,9 +37,13 @@ class CreateProject extends Component {
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Member Detail</h5>
           <div className="row">
-          <div className="input-field col s6">
-            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno}/>
+          <div className="input-field col s3">
+            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno} class="validate"/>
             <label htmlFor="flatno">Flat No</label>
+          </div>
+          <div className="input-field col s3">
+            <input type="text" id='flatstatus' onChange={this.handleChange} value={this.state.flatstatus} class="validate"/>
+            <label htmlFor="flatstatus">Flat Self Occupied/Rented</label>
           </div>
           <div className="input-field col s6">
             <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name}/>
@@ -66,8 +72,8 @@ class CreateProject extends Component {
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
-            <label htmlFor="member1carno">Car no</label>
+            <input type="text" id="member1dob" onChange={this.handleChange} value={this.state.member1dob}/>
+            <label htmlFor="member1dob">DOB</label>
           </div>
           <div className="input-field col s6">
             <input type="number" id='totalfamilycount' onChange={this.handleChange} value={this.state.totalfamilycount}/>
@@ -85,7 +91,11 @@ class CreateProject extends Component {
           </div>
           </div>
           <div className="row">
-          <div className="input-field col s12">
+          <div className="input-field col s6">
+            <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
+            <label htmlFor="member1carno">Car no</label>
+          </div>
+          <div className="input-field col s6">
             <textarea id="otherdetail" className="materialize-textarea" onChange={this.handleChange} value={this.state.otherdetail}></textarea>
             <label htmlFor="otherdetail">Other Detail</label>
           </div>

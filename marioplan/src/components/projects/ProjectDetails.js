@@ -26,17 +26,19 @@ const ProjectDetails = (props) => {
         <div className="card z-depth-0">
           <div className="card-content">
             <span className="card-title">Flat No - {directProject ? directProject.flatno : ''}</span>
-            <ul class="collection with-header">
-            {directProject && directProject.member1name && <li class="collection-header indigo lighten-5"><h3>{directProject.member1name}</h3></li>}
-            {directProject && directProject.totalfamilycount && <li class="collection-header yellow lighten-5">Family members - {directProject.totalfamilycount}</li>}
-            {directProject && directProject.member1phone && <li class="collection-header red lighten-5">Primary no - {directProject.member1phone}</li>}
-            {directProject && directProject.member1phone2 && <li class="collection-header red lighten-4">Secondary no - {directProject.member1phone2}</li>}
-            {directProject && directProject.member1bloodgroup && <li class="collection-header red lighten-2">Blood group - {directProject.member1bloodgroup}</li>}
-            {directProject && directProject.member1bike1 && <li class="collection-header deep-purple lighten-5">2 Wheeler - {directProject.member1bike1}</li>}
-            {directProject && directProject.member1bike2 && <li class="collection-header green lighten-5">2 Wheeler - {directProject.member1bike2}</li>}
-            {directProject && directProject.member1carno && <li class="collection-header green lighten-4">Car no - {directProject.member1carno}</li>}
-            {directProject && directProject.member1officeaddress && <li class="collection-header green lighten-3">Office address - {directProject.member1officeaddress}</li>}
-            {directProject && directProject.otherdetail && <li class="collection-header lime lighten-1">Other info - {directProject.otherdetail}</li>}
+            <ul className="collection with-header">
+            {directProject && directProject.member1name && <li className="collection-header indigo lighten-5"><h3>{directProject.member1name}</h3></li>}
+            {directProject && directProject.flatstatus && <li className="collection-header lime lighten-1">Flat Status - {directProject.flatstatus}</li>}
+            {directProject && directProject.totalfamilycount && <li className="collection-header yellow lighten-5">Family members - {directProject.totalfamilycount}</li>}
+            {directProject && directProject.member1phone && <li className="collection-header red lighten-5">Primary no - {directProject.member1phone}</li>}
+            {directProject && directProject.member1phone2 && <li className="collection-header red lighten-4">Secondary no - {directProject.member1phone2}</li>}
+            {directProject && directProject.member1bloodgroup && <li className="collection-header red lighten-2">Blood group - {directProject.member1bloodgroup}</li>}
+            {directProject && directProject.member1bike1 && <li className="collection-header deep-purple lighten-5">2 Wheeler - {directProject.member1bike1}</li>}
+            {directProject && directProject.member1bike2 && <li className="collection-header green lighten-5">2 Wheeler - {directProject.member1bike2}</li>}
+            {directProject && directProject.member1dob && <li className="collection-header green lighten-4">DOB - {directProject.member1dob}</li>}
+            {directProject && directProject.member1officeaddress && <li className="collection-header green lighten-3">Office address - {directProject.member1officeaddress}</li>}
+            {directProject && directProject.member1carno && <li className="collection-header green lighten-4">Car no - {directProject.member1carno}</li>}
+            {directProject && directProject.otherdetail && <li className="collection-header lime lighten-1">Other info - {directProject.otherdetail}</li>}
           </ul>
           </div>
           <div className="card-action grey lighten-4 grey-text">

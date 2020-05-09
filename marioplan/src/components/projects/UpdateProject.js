@@ -17,7 +17,9 @@ class UpdateProject extends Component {
     member1bike2: this.props.directProject? this.props.directProject.member1bike2 : '',
     member1carno: this.props.directProject? this.props.directProject.member1carno : '',
     member1officeaddress: this.props.directProject? this.props.directProject.member1officeaddress : '',
-    otherdetail: this.props.directProject? this.props.directProject.otherdetail : ''
+    otherdetail: this.props.directProject? this.props.directProject.otherdetail : '',
+    member1dob: this.props.directProject && this.props.directProject.member1dob != undefined? this.props.directProject.member1dob : '',
+    flatstatus: this.props.directProject && this.props.directProject.flatstatus != undefined ? this.props.directProject.flatstatus : '',
   }
   
   handleChange = (e) => {
@@ -38,18 +40,22 @@ class UpdateProject extends Component {
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Member Detail</h5>
           <div className="row">
-          <div className="input-field col s6">
-            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno}/>
+          <div className="input-field col s3">
+            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno} required/>
             <label className="active" htmlFor="flatno">Flat No</label>
           </div>
+          <div className="input-field col s3">
+            <input type="text" id="flatstatus" onChange={this.handleChange} value={this.state.flatstatus} required/>
+            <label className="active" htmlFor="flatstatus">Flat Self Occupied/Rented</label>
+          </div>
           <div className="input-field col s6">
-            <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name}/>
+            <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name} required/>
             <label className="active" htmlFor="member1name">Name</label>
           </div>
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone}/>
+            <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone} required/>
             <label className="active" htmlFor="member1phone">Primary mobile no</label>
           </div>
           <div className="input-field col s6">
@@ -69,8 +75,8 @@ class UpdateProject extends Component {
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
-            <label className="active" htmlFor="member1carno">Car no</label>
+            <input type="text" id="member1dob" onChange={this.handleChange} value={this.state.member1dob}/>
+            <label className="active" htmlFor="member1dob">DOB</label>
           </div>
           <div className="input-field col s6">
             <input type="number" id='totalfamilycount' onChange={this.handleChange} value={this.state.totalfamilycount}/>
@@ -79,7 +85,7 @@ class UpdateProject extends Component {
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup}/>
+            <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup} required/>
             <label className="active" htmlFor="member1bloodgroup">Blood group</label>
           </div>
           <div className="input-field col s6">
@@ -88,7 +94,11 @@ class UpdateProject extends Component {
           </div>
           </div>
           <div className="row">
-          <div className="input-field col s12">
+          <div className="input-field col s6">
+            <input type="text" id="member1carno" onChange={this.handleChange} value={this.state.member1carno}/>
+            <label className="active" htmlFor="member1carno">Car no</label>
+          </div>
+          <div className="input-field col s6">
             <textarea id="otherdetail" className="materialize-textarea" onChange={this.handleChange} value={this.state.otherdetail}></textarea>
             <label className="active" htmlFor="otherdetail">Other Detail</label>
           </div>
