@@ -5,7 +5,7 @@
   "background_color": "#5658df",
   "display": "browser",
   "Scope": "/",
-  "start_url": "https://simandhar-7b623.web.app/signin",
+  "start_url": "https://simandhar-7b623.web.app/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
