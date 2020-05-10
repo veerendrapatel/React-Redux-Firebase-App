@@ -2,7 +2,7 @@
   "name": "SimandharDarshan",
   "short_name": "Simandhar",
   "theme_color": "#45e995",
-  "background_color": "#5658df",
+  "background_color": "#df569c",
   "display": "standalone",
   "Scope": "https://simandhar-7b623.web.app/",
   "start_url": "https://simandhar-7b623.web.app/",
