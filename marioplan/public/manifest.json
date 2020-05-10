@@ -4,7 +4,7 @@
   "theme_color": "#45e995",
   "background_color": "#5658df",
   "display": "browser",
-  "Scope": "/",
+  "Scope": "https://simandhar-7b623.web.app/",
   "start_url": "https://simandhar-7b623.web.app/",
   "icons": [
     {
