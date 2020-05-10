@@ -50,9 +50,10 @@ const ProjectDetails = (props) => {
     )
   } else {
     return (
-      <div className="container center">
-        <p>Loading project...</p>
-      </div>
+      // <div className="container center">
+      //   <p>Loading project...</p>
+      // </div>
+      <Redirect to='/' /> 
     )
   }
 }

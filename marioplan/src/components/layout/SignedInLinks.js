@@ -14,7 +14,6 @@ const SignedInLinks = (props) => {
     window.location.reload(false);
   }
   if (profile.approved === false) return <Redirect to='/approvalWaiting' />
-  
   const isUserAddedMember = members.some(el => el.authorId === auth.uid )
   return (
     <ul>

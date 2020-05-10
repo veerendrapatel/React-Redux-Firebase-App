@@ -38,21 +38,21 @@ class CreateProject extends Component {
           <h5 className="grey-text text-darken-3">Member Detail</h5>
           <div className="row">
           <div className="input-field col s3">
-            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno} class="validate"/>
+            <input type="text" id='flatno' onChange={this.handleChange} value={this.state.flatno} required/>
             <label htmlFor="flatno">Flat No</label>
           </div>
           <div className="input-field col s3">
-            <input type="text" id='flatstatus' onChange={this.handleChange} value={this.state.flatstatus} class="validate"/>
-            <label htmlFor="flatstatus">Flat Self/Rented</label>
+            <input type="text" id='flatstatus' onChange={this.handleChange} value={this.state.flatstatus} required/>
+            <label htmlFor="flatstatus">Self/Rented</label>
           </div>
           <div className="input-field col s6">
-            <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name}/>
+            <input type="text" id="member1name" onChange={this.handleChange} value={this.state.member1name} required/>
             <label htmlFor="member1name">Name</label>
           </div>
           </div>          
           <div className="row">
           <div className="input-field col s6">
-            <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone}/>
+            <input type="number" id='member1phone' onChange={this.handleChange} value={this.state.member1phone} required/>
             <label htmlFor="member1phone">Primary mobile no</label>
           </div>
           <div className="input-field col s6">
@@ -82,7 +82,7 @@ class CreateProject extends Component {
           </div>
           <div className="row">
           <div className="input-field col s6">
-            <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup}/>
+            <input type="text" id='member1bloodgroup' onChange={this.handleChange} value={this.state.member1bloodgroup} required/>
             <label htmlFor="member1bloodgroup">Blood group</label>
           </div>
           <div className="input-field col s6">
