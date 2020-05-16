@@ -18,7 +18,7 @@ class Dashboard extends Component {
     this.setState({search: e.target.value.toLowerCase(), searched});
   }
   render() {
-    const { auth, notifications, directProjects } = this.props;
+    const { auth, notifications } = this.props; //directProjects
     if (!auth.uid) return <Redirect to='/signin' /> 
     
     return (

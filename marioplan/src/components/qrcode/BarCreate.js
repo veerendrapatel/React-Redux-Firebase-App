@@ -2,50 +2,39 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createProject } from '../../store/actions/projectActions'
 import { Redirect } from 'react-router-dom'
-import axios from 'axios'
-class QrCreate extends Component {
+import BarCodeGenerator from './BarCodeGenerator'
+class BarCreate extends Component {
   state = {
-    vehicalNo: ''
+    vechicleNo: '',
+    showQr: false
   }
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
-  handleSubmit = async (e) => {
+  handleSubmit =  (e) => {
     e.preventDefault();
-    // this.props.createProject(this.state);
-    // this.props.history.push('/');
-    try {
-      await axios.get(`http://barcodes4.me/barcode/c128a/${this.state.vehicalNo}.png`)
-      .then((response) => {
-        console.log(response.data);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
-      });
-    } catch(error) {
-
-    }
+    this.setState({showQr : true});
   }
   render() {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' /> 
     return (
       <div className="container col s12">
-        <form className="white" onSubmit={this.handleSubmit}>
-          <h5 className="grey-text text-darken-3">Vehical No</h5>
+        {!this.state.showQr ? <form className="white" onSubmit={this.handleSubmit}>
+          <h5 className="grey-text text-darken-3">Vechicle No</h5>
           <div className="row">
           <div className="input-field col s3">
-            <input type="text" id='vehicalNo' onChange={this.handleChange} value={this.state.vehicalNo} required/>
-            <label htmlFor="vehicalNo">Vehical No</label>
+            <input type="text" id='vechicleNo' onChange={this.handleChange} value={this.state.vechicleNo} required/>
+            <label htmlFor="vechicleNo">Vechicle No</label>
           </div>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1">Create</button>
           </div>
-        </form>
+        </form> : ''}
+        {this.state.showQr ? <BarCodeGenerator qrValue={this.state.vechicleNo} /> : ''}
       </div>
     )
   }
@@ -63,4 +52,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(QrCreate)
+export default connect(mapStateToProps, mapDispatchToProps)(BarCreate)

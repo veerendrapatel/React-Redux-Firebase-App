@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-class SearchPlace extends Component {
+import QrCode  from 'react.qrcode.generator'
+class QrGenerator extends Component {
   render() {
-    //const { profile } = this.props;
+    const { qrValues } = this.props;
     return (
       <div className="container">
         <div className="row">
-        <div className="progress">
-           <div className="indeterminate"></div>
-         </div>
       <div className="col s12 m12">
       <div className="card">
       <div className="card-image">
-            <img alt="imgholder" src="https://firebasestorage.googleapis.com/v0/b/simandhar-7b623.appspot.com/o/search.jpg?alt=media&token=84750e0e-fec8-413e-9187-c346a1840499" />
-          </div>
+      <QrCode value={qrValues} size='200'/>
+      </div>
           <div className="card-content">
-            <p>Please search for members</p>
+            <p> Please share this with visitor. Security man will scan this and let the visitor in
+            </p>
           </div>
         </div>
       </div>
@@ -31,4 +30,4 @@ const mapStateToProps = (state) => {
     //profile: state.firebase.profile
   }
 }
-export default connect(mapStateToProps)(SearchPlace)
+export default connect(mapStateToProps)(QrGenerator)
