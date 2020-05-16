@@ -3,15 +3,15 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 // Replace this with your own config details
-const firebaseConfig = {
-  apiKey: "AIzaSyDfQx_W22oeM9tDGpAWnu4pt80I6AQlP5k",
-  authDomain: "dummy-project-50d33.firebaseapp.com",
-  databaseURL: "https://dummy-project-50d33.firebaseio.com",
-  projectId: "dummy-project-50d33",
-  storageBucket: "dummy-project-50d33.appspot.com",
-  messagingSenderId: "312527655119",
-  appId: "1:312527655119:web:47cda8861d25926430a7ba",
-  measurementId: "G-V01MLEJ6J3"
+var firebaseConfig = {
+  apiKey: "AIzaSyBX_WvrPYpM2-zgtY5tgWvQPs5AG1DUgT4",
+  authDomain: "simandhar-7b623.firebaseapp.com",
+  databaseURL: "https://simandhar-7b623.firebaseio.com",
+  projectId: "simandhar-7b623",
+  storageBucket: "simandhar-7b623.appspot.com",
+  messagingSenderId: "686820060754",
+  appId: "1:686820060754:web:ea7373e3b57226148c798b",
+  measurementId: "G-60XYCT4XER"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
