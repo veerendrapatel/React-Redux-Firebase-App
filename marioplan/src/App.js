@@ -8,6 +8,9 @@ import SignUp from './components/auth/SignUp'
 import AwaitingA from './components/auth/Awaiting'
 import CreateProject from './components/projects/CreateProject'
 import UpdateProject from './components/projects/UpdateProject'
+import QrContainer from './components/qrcode/QrContainer'
+import QrCreate from './components/qrcode/QrCreate'
+import UnderCons from './UnderCons'
 class App extends Component {
   render() {
     return (
@@ -23,6 +26,10 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateProject} />
             <Route path='/update/:id' component={UpdateProject} />
+            {/* <Route path='/qrcode/create' component={QrCreate} />
+            <Route path='/qrcode' component={QrContainer} /> */}
+            <Route path='/qrcode/create' component={UnderCons} />
+            <Route path='/visitor' component={UnderCons} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -22,6 +22,8 @@ const SignedInLinks = (props) => {
           Home
       </NavLink></li>
       {!isUserAddedMember && <li onClick={handleClick}><NavLink to='/create'><i className="small material-icons">add</i>Add Member</NavLink></li>} 
+      <li onClick={handleClick}><NavLink to='/qrcode/create'><i className="small material-icons">calendar_view_day</i>QR Code</NavLink></li>
+      <li onClick={handleClick}><NavLink to='/visitor'><i className="small material-icons">dashboard</i>Visitor Pass</NavLink></li>
       <li onClick={handleClick}><a onClick={props.signOut}><i className="small material-icons">exit_to_app</i>Log Out</a></li>
     </ul>
   )

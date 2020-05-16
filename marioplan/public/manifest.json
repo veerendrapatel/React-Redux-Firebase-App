@@ -4,8 +4,8 @@
   "theme_color": "#45e995",
   "background_color": "#df569c",
   "display": "standalone",
-  "Scope": "https://simandhar-7b623.web.app/",
-  "start_url": "https://simandhar-7b623.web.app/",
+  "Scope": ".",
+  "start_url": "http://localhost:3001",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
