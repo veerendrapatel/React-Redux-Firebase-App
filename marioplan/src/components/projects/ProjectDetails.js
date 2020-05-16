@@ -29,7 +29,7 @@ const ProjectDetails = (props) => {
             <ul className="collection with-header">
             {directProject && directProject.member1name && <li className="collection-header indigo lighten-5"><h3>{directProject.member1name}</h3></li>}
             {directProject && directProject.flatstatus && <li className="collection-header lime lighten-1">Flat Status - {directProject.flatstatus}</li>}
-            {directProject && directProject.totalfamilycount && <li className="collection-header yellow lighten-5">Family members - {directProject.totalfamilycount}</li>}
+            {directProject && directProject.totalfamilycount>0 && <li className="collection-header yellow lighten-5">Family members - {directProject.totalfamilycount}</li>}
             {directProject && directProject.member1phone && <li className="collection-header red lighten-5">Primary no - {directProject.member1phone}</li>}
             {directProject && directProject.member1phone2 && <li className="collection-header red lighten-4">Secondary no - {directProject.member1phone2}</li>}
             {directProject && directProject.member1bloodgroup && <li className="collection-header red lighten-2">Blood group - {directProject.member1bloodgroup}</li>}
