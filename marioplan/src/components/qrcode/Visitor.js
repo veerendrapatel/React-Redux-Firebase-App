@@ -29,21 +29,21 @@ class Visitor extends Component {
         {!this.state.showQr ? <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Visitor Pass</h5>
           <div className="row">
-          <div className="input-field col s3">
+          <div className="input-field col s6">
             <input type="text" id='visitorName' onChange={this.handleChange} value={this.state.visitorName} required/>
             <label htmlFor="visitorName">Visitor Name</label>
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s6">
             <input type="number" id='visitorPhone' onChange={this.handleChange} value={this.state.visitorPhone}/>
             <label htmlFor="visitorPhone">Visitor Phone</label>
           </div>
           </div>
           <div className="row">
-          <div className="input-field col s3">
+          <div className="input-field col s6">
             <input type="text" id='visitorPurpose' onChange={this.handleChange} value={this.state.visitorPurpose} required/>
             <label htmlFor="visitorPurpose">Visitor Purpose</label>
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s6">
             <input type="text" id='visitorDetail' onChange={this.handleChange} value={this.state.visitorDetail}/>
             <label htmlFor="visitorDetail">Other Detail</label>
           </div>

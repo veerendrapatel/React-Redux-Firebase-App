@@ -25,7 +25,7 @@ class BarCreate extends Component {
         {!this.state.showQr ? <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Vechicle No</h5>
           <div className="row">
-          <div className="input-field col s3">
+          <div className="input-field col s6">
             <input type="text" id='vechicleNo' onChange={this.handleChange} value={this.state.vechicleNo} required/>
             <label htmlFor="vechicleNo">Vechicle No</label>
           </div>
