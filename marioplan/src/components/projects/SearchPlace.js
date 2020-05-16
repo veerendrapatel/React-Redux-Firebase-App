@@ -6,9 +6,9 @@ class SearchPlace extends Component {
     return (
       <div className="container">
         <div className="row">
-        <div className="progress">
+        {/* <div className="progress">
            <div className="indeterminate"></div>
-         </div>
+         </div> */}
       <div className="col s12 m12">
       <div className="card">
       <div className="card-image">

@@ -25,7 +25,7 @@ class Dashboard extends Component {
       <div className="dashboard container">
         <div className="input-field col s6">
           <i className="material-icons prefix">search</i>
-          <input id="search" type="text" onChange={this.handleSearch}/>
+          <input id="search" placeholder="search" type="text" onChange={this.handleSearch}/>
         </div>
         <div className="row">
           <div className="col s12 m6">
